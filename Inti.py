@@ -1,3 +1,4 @@
+import fileinput
 def gcd(i, j):
     if i > j:
         return gcd(j, i)
@@ -11,7 +12,18 @@ def Inti(n, a, b):
     for i in range(a, b + 1):
         if gcd(i, n) == 1:
             sum += i
+    sum = sum % 1000000007
     return sum
 
+# stdin = []
+# for i in fileinput.input():
+#     stdin.append(i.rstrip())
+#
+#
+# line = 1
+# for testcase in range(int(stdin[0])):
+#     n, a, b = stdin[line].split()
+#     line += 1
+#     print(Inti(n, a, b))
 
-print(Inti(5, 1, 4))
+print(Inti(3580, 1000, 4000))
