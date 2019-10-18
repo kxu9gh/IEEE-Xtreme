@@ -11,6 +11,6 @@ def compute(n, k, lst):
         diff.append(s[i] - s[i-1])
         i += 1
     diff = sorted(diff)
-    return max(diff[:k])
+    return max(diff[:n-k])
 
-print(compute(4, 2, [3, 5, 1, 1]))
+print(compute(5, 4, [30, 50, 41, 40, 20]))
