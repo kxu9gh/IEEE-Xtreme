@@ -70,11 +70,6 @@ class Main {
             }
         }
 
-        /* Adds Edge E to the graph. */
-        public void addEdge(Edge e) {
-            addEdgeHelper(e.getSource(), e.getDest(), e.getWeight());
-        }
-
         /* Creates an Edge between V1 and V2 with no weight. */
         public void addEdge(int v1, int v2) {
             addEdgeHelper(v1, v2, 0);
@@ -149,5 +144,33 @@ class Main {
 
     }
 
-    private class merchant
+    private class Edge {
+
+        private int from;
+        private int to;
+        private int weight;
+
+        Edge(int from, int to, int weight) {
+            this.from = from;
+            this.to = to;
+            this.weight = weight;
+        }
+
+        public String toString() {
+            return "(" + from + ", " + to + ", weight = " + weight + ")";
+        }
+
+    }
+
+    public static HashMap<Integer, ArrayList<Integer>> getPossibleRoads(Graph g, int[] loc) {
+        HashMap<Integer, ArrayList<Integer>> roads = new HashMap<>();
+        for (int mer: loc) {
+            ArrayDeque<Integer> fringe = new ArrayDeque<>();
+            ArrayList<>
+            while (!fringe.isEmpty()) {
+                int curr = fringe.poll();
+                
+            }
+        }
+    }
 }
