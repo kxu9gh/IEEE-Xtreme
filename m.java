@@ -162,13 +162,21 @@ class Main {
 
     }
 
-    public static HashMap<Integer, ArrayList<Integer>> getPossibleRoads(Graph g, int[] loc) {
-        HashMap<Integer, ArrayList<Integer>> roads = new HashMap<>();
-        for (int mer: loc) {
-            ArrayDeque<Integer> fringe = new ArrayDeque<>();
-            ArrayList<>
-            while (!fringe.isEmpty()) {
-                int curr = fringe.poll();
+//    public static HashMap<Integer, ArrayList<Integer>> getPossibleRoads(Graph g, int[] loc) {
+//        HashMap<Integer, ArrayList<Integer>> roads = new HashMap<>();
+//        for (int mer: loc) {
+//            ArrayDeque<Integer> fringe = new ArrayDeque<>();
+//            ArrayList<>
+//            while (!fringe.isEmpty()) {
+//                int curr = fringe.poll();
+//
+//            }
+//        }
+//    }
+
+    public HashMap<Integer,Integer> MaxiumProfit(HashMap<Integer, ArrayList<Integer>> area) {
+        for (int town: area.keySet()) {
+            for (int target: area.get(town)) {
                 
             }
         }

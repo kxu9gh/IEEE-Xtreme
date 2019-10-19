@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/IEEE Xtreme.iml" filepath="$PROJECT_DIR$/.idea/IEEE Xtreme.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IEEE Xtreme.iml" filepath="$PROJECT_DIR$/IEEE Xtreme.iml" />
     </modules>
   </component>
 </project>
