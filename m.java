@@ -23,7 +23,7 @@ class Main {
 
         //add merchant
         int k = in.nextInt();
-        int[] loc = int[k]
+        int[] loc = new int[k];
         for (int i = 0; i < k; i++) {
             loc[i] = in.nextInt();
         }
@@ -33,7 +33,7 @@ class Main {
     }
 
 
-    private class Graph {
+    private static class Graph {
 
         /* Maps vertices to a list of its neighboring vertices. */
         private HashMap<Integer, Set<Integer>> neighbors = new HashMap<>();
@@ -144,7 +144,7 @@ class Main {
 
     }
 
-    private class Edge {
+    private static class Edge {
 
         private int from;
         private int to;
@@ -162,15 +162,33 @@ class Main {
 
     }
 
-    public static HashMap<Integer, ArrayList<Integer>> getPossibleRoads(Graph g, int[] loc) {
-        HashMap<Integer, ArrayList<Integer>> roads = new HashMap<>();
+    public static HashMap<Integer, HashSet<Integer>> getPossibleRoads(Graph g, int[] loc) {
+        HashMap<Integer, HashSet<Integer>> roads = new HashMap<>();
         for (int mer: loc) {
             ArrayDeque<Integer> fringe = new ArrayDeque<>();
-            ArrayList<>
+            HashSet<Integer> area = new HashSet<>();
+            fringe.add(mer);
             while (!fringe.isEmpty()) {
                 int curr = fringe.poll();
-                
+                area.add(curr);
+                for (int i : g.getNeighbors(curr)) {
+                    area.add(i);
+                }
+            }
+            roads.put(mer, area);
+        }
+        return roads;
+    }
+
+    public int maxProfit(int prices[]) {
+        int maxprofit = 0;
+        for (int i = 0; i < prices.length - 1; i++) {
+            for (int j = i + 1; j < prices.length; j++) {
+                int profit = prices[j] - prices[i];
+                if (profit > maxprofit)
+                    maxprofit = profit;
             }
         }
+        return maxprofit;
     }
 }
