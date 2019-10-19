@@ -11,6 +11,7 @@ for t in range(tC):
         diffs.append(dogs[j+1] - dogs[j])
 
     diffs = sorted(diffs)
+    dogs = list(dogs)
     if k == 1:
         print(dogs[-1] - dogs[0])
     else:
